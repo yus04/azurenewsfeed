@@ -24,6 +24,7 @@ from azure.storage.blob import BlobServiceClient, ContentSettings
 
 STAGING_PATH = os.path.join("data", ".blob_staging.json")
 CONTAINER_NAME = os.environ.get("AZURE_STORAGE_CONTAINER", "articles")
+ARTICLES_PREFIX = "raw/articles/"
 
 # Query string parameters that are stripped during URL normalization because
 # they do not identify the article (tracking/marketing parameters).
@@ -127,9 +128,6 @@ def get_container_client():
     except ResourceExistsError:
         pass
     return container_client
-
-
-ARTICLES_PREFIX = "raw/articles/"
 
 
 def _recent_month_prefixes(days=DEDUP_LOOKBACK_DAYS, now=None):

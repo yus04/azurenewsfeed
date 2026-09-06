@@ -513,14 +513,16 @@ def main():
     # upload step. This is a working-directory cache only, not part of the
     # published site data, and is not committed to the repository.
     #
-    # raw_by_link intentionally mirrors the same link-based dedup semantics
-    # as unique_articles above (one record per link); if the same link is
-    # ever emitted by more than one source, any single instance of it is
-    # representative since they all describe the same article URL.
+    # Staged articles are derived directly from unique_articles (the same
+    # deduped/30-day-filtered list written to feeds.json above) so the raw
+    # Blob Storage output always matches the site's own article set.
+    # raw_by_link mirrors the same link-based dedup semantics; if the same
+    # link is ever emitted by more than one source, any single instance of
+    # it is representative since they all describe the same article URL.
     os.makedirs("data", exist_ok=True)
     raw_by_link = {r["link"]: r for r in raw_articles if r.get("link")}
     staged_articles = [
-        raw_by_link[link] for link in seen_links if link in raw_by_link
+        raw_by_link[a["link"]] for a in unique_articles if a["link"] in raw_by_link
     ]
     staging_path = os.path.join("data", ".blob_staging.json")
     with open(staging_path, "w", encoding="utf-8") as f:
