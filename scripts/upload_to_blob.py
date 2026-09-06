@@ -132,13 +132,15 @@ def get_container_client():
 ARTICLES_PREFIX = "raw/articles/"
 
 
-def _recent_day_prefixes(days=DEDUP_LOOKBACK_DAYS, now=None):
-    """Build one raw/articles/YYYY/MM/DD/ prefix per day in the lookback window."""
+def _recent_month_prefixes(days=DEDUP_LOOKBACK_DAYS, now=None):
+    """Build one raw/articles/YYYY/MM/ prefix per distinct calendar month touched by the lookback window."""
     now = now or datetime.now(timezone.utc)
-    return [
-        (now - timedelta(days=offset)).strftime(ARTICLES_PREFIX + "%Y/%m/%d/")
-        for offset in range(days)
-    ]
+    months = []
+    for offset in range(days):
+        month_key = (now - timedelta(days=offset)).strftime(ARTICLES_PREFIX + "%Y/%m/")
+        if month_key not in months:
+            months.append(month_key)
+    return months
 
 
 def list_existing_article_ids(container_client):
@@ -152,11 +154,13 @@ def list_existing_article_ids(container_client):
     window, not just the exact date-based path we would write to on this
     run. The lookback window matches fetch_feeds.py's 30-day article
     retention, since a candidate article can never have first been
-    collected outside that range, which keeps this bounded instead of
-    listing the entire (ever-growing) container.
+    collected outside that range. Listing is grouped by calendar month
+    (typically 1-2 `list_blobs` calls) rather than one call per day, which
+    keeps this bounded instead of listing the entire (ever-growing)
+    container while minimizing the number of API round trips.
     """
     existing_ids = set()
-    for prefix in _recent_day_prefixes():
+    for prefix in _recent_month_prefixes():
         for blob in container_client.list_blobs(name_starts_with=prefix):
             filename = blob.name.rsplit("/", 1)[-1]
             if filename.endswith(".json"):
