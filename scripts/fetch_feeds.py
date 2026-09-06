@@ -82,6 +82,79 @@ COMMUNITY_BLOGS = {
     "devtoazure": ("Dev.to Azure", "https://dev.to/feed/azure"),
 }
 
+# Category grouping mirrors js/app.js CATEGORIES so the Azure Blob Storage
+# output uses the same existing Azure Feed categories. blogId -> category name.
+BLOG_CATEGORIES = {
+    # Compute
+    "azurecompute": "Compute",
+    "aksblog": "Compute",
+    "azurevirtualdesktopblog": "Compute",
+    "azurehighperformancecomputingblog": "Compute",
+    # Data & AI
+    "analyticsonazure": "Data & AI",
+    "azure-databricks": "Data & AI",
+    "oracleonazureblog": "Data & AI",
+    "cosmosdbblog": "Data & AI",
+    "azuresqlblog": "Data & AI",
+    "foundryblog": "Data & AI",
+    "azure-ai-foundry-blog": "Data & AI",
+    # Infrastructure
+    "azureinfrastructureblog": "Infrastructure",
+    "azurearcblog": "Infrastructure",
+    "azurestackblog": "Infrastructure",
+    "azurenetworkingblog": "Infrastructure",
+    "azurenetworksecurityblog": "Infrastructure",
+    "azurestorageblog": "Infrastructure",
+    "coreinfrastructureandsecurityblog": "Infrastructure",
+    # Architecture
+    "azurearchitectureblog": "Architecture",
+    "azure-customer-innovation-blog": "Architecture",
+    "iseblog": "Architecture",
+    # Apps & Platform
+    "appsonazureblog": "Apps & Platform",
+    "azurepaasblog": "Apps & Platform",
+    "integrationsonazureblog": "Apps & Platform",
+    "messagingonazureblog": "Apps & Platform",
+    "aspireblog": "Apps & Platform",
+    "azuresdkblog": "Apps & Platform",
+    # Operations
+    "azuregovernanceandmanagementblog": "Operations",
+    "azureobservabilityblog": "Operations",
+    "finopsblog": "Operations",
+    "azuretoolsblog": "Operations",
+    "azuremigrationblog": "Operations",
+    "azuredevops": "Operations",
+    "azureadvancedthreatprotection": "Operations",
+    "microsoftsentinelblog": "Operations",
+    "microsoftdefendercloudblog": "Operations",
+    # Community
+    "azuredevcommunityblog": "Community",
+    "azure-events": "Community",
+    "linuxandopensourceblog": "Community",
+    "allthingsazure": "Community",
+    "msdevblog": "Community",
+    "gbblog": "Community",
+    "azurecitadelblog": "Community",
+    "devtoazure": "Community",
+    "itopstalkblog": "Community",
+    # Developer Tools
+    "visualstudio": "Developer Tools",
+    "vscodeblog": "Developer Tools",
+    "commandline": "Developer Tools",
+    "developfromthecloud": "Developer Tools",
+    # Specialized
+    "azurecommunicationservicesblog": "Specialized",
+    "azureconfidentialcomputingblog": "Specialized",
+    "azuremapsblog": "Specialized",
+    "telecommunications-industry-blog": "Specialized",
+    "microsoft-planetary-computer-blog": "Specialized",
+}
+
+
+def category_for_blog(blog_id):
+    """Map a blog id to its existing Azure Feed category, defaulting to Specialized."""
+    return BLOG_CATEGORIES.get(blog_id, "Specialized")
+
 
 def clean_html(text):
     """Remove HTML tags and clean up text."""
@@ -91,6 +164,41 @@ def clean_html(text):
     clean = unescape(clean)
     clean = re.sub(r"\s+", " ", clean).strip()
     return clean
+
+
+def extract_full_content(entry):
+    """Return the fullest available HTML content for a feed entry."""
+    content_list = entry.get("content")
+    if content_list:
+        value = content_list[0].get("value", "")
+        if value:
+            return value
+    return entry.get("summary", "")
+
+
+def extract_images(html):
+    """Extract image URLs referenced in HTML content, without downloading them."""
+    if not html:
+        return []
+    return re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', html)
+
+
+def build_raw_article(entry, blog_name, blog_id):
+    """Build the raw (untruncated) article record used for Azure Blob Storage output."""
+    full_html = extract_full_content(entry)
+    summary_html = entry.get("summary", "")
+    summary_text = clean_html(summary_html)
+    return {
+        "title": clean_html(entry.get("title", "Untitled")),
+        "link": entry.get("link", ""),
+        "published": parse_date(entry),
+        "source": blog_name,
+        "author": entry.get("author") or None,
+        "summary": summary_text or None,
+        "content": clean_html(full_html),
+        "images": extract_images(full_html),
+        "category": category_for_blog(blog_id),
+    }
 
 
 def truncate(text, max_length=300):
@@ -120,7 +228,7 @@ def parse_date(entry):
     return datetime.now(timezone.utc).isoformat()
 
 
-def fetch_tech_community_feeds():
+def fetch_tech_community_feeds(raw_out=None):
     """Fetch articles from Tech Community blogs."""
     articles = []
 
@@ -149,6 +257,8 @@ def fetch_tech_community_feeds():
                         "author": entry.get("author", "Microsoft"),
                     }
                 )
+                if raw_out is not None:
+                    raw_out.append(build_raw_article(entry, blog_name, board_id))
                 count += 1
 
             print(f"  Found {count} articles")
@@ -161,7 +271,7 @@ def fetch_tech_community_feeds():
     return articles
 
 
-def fetch_aks_blog():
+def fetch_aks_blog(raw_out=None):
     """Fetch articles from the AKS blog."""
     articles = []
     print("Fetching: AKS Blog...")
@@ -187,6 +297,8 @@ def fetch_aks_blog():
                     "author": entry.get("author", "Microsoft"),
                 }
             )
+            if raw_out is not None:
+                raw_out.append(build_raw_article(entry, "AKS Blog", "aksblog"))
             count += 1
 
         print(f"  Found {count} articles")
@@ -197,7 +309,7 @@ def fetch_aks_blog():
     return articles
 
 
-def fetch_devblogs_feeds():
+def fetch_devblogs_feeds(raw_out=None):
     """Fetch articles from Microsoft DevBlogs."""
     articles = []
 
@@ -225,6 +337,8 @@ def fetch_devblogs_feeds():
                         "author": entry.get("author", "Microsoft"),
                     }
                 )
+                if raw_out is not None:
+                    raw_out.append(build_raw_article(entry, blog_name, blog_id))
                 count += 1
 
             print(f"  Found {count} articles")
@@ -237,7 +351,7 @@ def fetch_devblogs_feeds():
     return articles
 
 
-def fetch_community_blogs():
+def fetch_community_blogs(raw_out=None):
     """Fetch articles from community blogs."""
     articles = []
 
@@ -265,6 +379,8 @@ def fetch_community_blogs():
                         "author": entry.get("author", "Microsoft"),
                     }
                 )
+                if raw_out is not None:
+                    raw_out.append(build_raw_article(entry, blog_name, blog_id))
                 count += 1
 
             print(f"  Found {count} articles")
@@ -369,11 +485,12 @@ def main():
     print("Azure News Feed - Fetching RSS Feeds")
     print("=" * 60)
 
+    raw_articles = []
     all_articles = []
-    all_articles.extend(fetch_tech_community_feeds())
-    all_articles.extend(fetch_aks_blog())
-    all_articles.extend(fetch_devblogs_feeds())
-    all_articles.extend(fetch_community_blogs())
+    all_articles.extend(fetch_tech_community_feeds(raw_out=raw_articles))
+    all_articles.extend(fetch_aks_blog(raw_out=raw_articles))
+    all_articles.extend(fetch_devblogs_feeds(raw_out=raw_articles))
+    all_articles.extend(fetch_community_blogs(raw_out=raw_articles))
 
     # Sort by date, newest first
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
@@ -391,6 +508,19 @@ def main():
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
+
+    # Stage the raw (untruncated) article records for the Azure Blob Storage
+    # upload step. This is a working-directory cache only, not part of the
+    # published site data, and is not committed to the repository.
+    os.makedirs("data", exist_ok=True)
+    raw_by_link = {r["link"]: r for r in raw_articles if r.get("link")}
+    staged_articles = [
+        raw_by_link[link] for link in seen_links if link in raw_by_link
+    ]
+    staging_path = os.path.join("data", ".blob_staging.json")
+    with open(staging_path, "w", encoding="utf-8") as f:
+        json.dump(staged_articles, f, indent=2, ensure_ascii=False)
+    print(f"Staged {len(staged_articles)} article records for Blob Storage upload")
 
     # Generate AI summary (optional)
     summary = generate_ai_summary(unique_articles)
