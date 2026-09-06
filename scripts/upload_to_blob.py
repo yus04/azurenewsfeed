@@ -119,21 +119,44 @@ def get_container_client():
     return container_client
 
 
+ARTICLES_PREFIX = "raw/articles/"
+
+
+def list_existing_article_ids(container_client):
+    """List ids of articles already stored anywhere under raw/articles/.
+
+    Blob paths are date-partitioned (raw/articles/YYYY/MM/DD/{id}.json), but
+    the article id itself is stable per URL regardless of the date it was
+    first collected on. To guarantee an article is never uploaded twice -
+    even if it keeps showing up in the feed across multiple daily runs - we
+    dedupe against every id already present in the container, not just the
+    exact date-based path we would write to on this run.
+    """
+    existing_ids = set()
+    for blob in container_client.list_blobs(name_starts_with=ARTICLES_PREFIX):
+        filename = blob.name.rsplit("/", 1)[-1]
+        if filename.endswith(".json"):
+            existing_ids.add(filename[: -len(".json")])
+    return existing_ids
+
+
 def upload_articles(container_client, articles):
-    """Upload one blob per article, skipping ids that already exist."""
+    """Upload one blob per article, skipping ids that already exist anywhere in the container."""
     uploaded = 0
     skipped = 0
     failed = []
 
+    existing_ids = list_existing_article_ids(container_client)
+
     for article in articles:
+        if article["id"] in existing_ids:
+            skipped += 1
+            continue
+
         blob_path = blob_path_for(article)
         blob_client = container_client.get_blob_client(blob_path)
 
         try:
-            if blob_client.exists():
-                skipped += 1
-                continue
-
             payload = json.dumps(article, indent=2, ensure_ascii=False)
             blob_client.upload_blob(
                 payload,
@@ -141,11 +164,13 @@ def upload_articles(container_client, articles):
                 content_settings=ContentSettings(content_type="application/json"),
             )
             uploaded += 1
+            existing_ids.add(article["id"])
             print(f"  Uploaded {blob_path}")
         except ResourceExistsError:
             # Another concurrent run already created this blob; treat as a
             # duplicate rather than a failure.
             skipped += 1
+            existing_ids.add(article["id"])
         except Exception as e:
             failed.append((blob_path, str(e)))
             print(f"  Error uploading {blob_path}: {e}")
