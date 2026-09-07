@@ -37,6 +37,7 @@ jobs:
       - name: Upload new articles to Azure Blob Storage
         env:
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          AZURE_STORAGE_CONTAINER: raw-articles
         run: python scripts/upload_to_blob.py
 
       - name: Commit and push changes
