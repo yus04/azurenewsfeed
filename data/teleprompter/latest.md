@@ -8,17 +8,8 @@ E aí pessoal, tudo bem?
 [PAUSA]
 Bem-vindos a mais um Azure News Diário.
 Hoje é dia 07/09/2026.
-Temos 2 atualizações para cobrir.
+Temos 1 atualizações para cobrir.
 Vamos direto ao ponto.
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Integrations on Azure]
-
-  ► Logic Apps Aviators Newsletter - September 2026
-    In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month September 2026's Ace Aviator: Par
-    Link: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-2026/ba-p/4553787
-
 [PAUSA]
 
 ----------------------------------------
