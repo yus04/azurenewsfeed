@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-19T15:40:24.450162+00:00",
-  "totalArticles": 161,
+  "lastUpdated": "2026-09-20T15:45:32.548981+00:00",
+  "totalArticles": 157,
   "articles": [
     {
       "title": "A2A Endpoints and A2A Tool in Microsoft Foundry agents",
@@ -1414,42 +1414,6 @@
       "blog": "Visual Studio Blog",
       "blogId": "visualstudio",
       "author": "Matt Soucoup, Pablo Lopes"
-    },
-    {
-      "title": "Azure Managed Redis Deployment Automation",
-      "link": "https://techcommunity.microsoft.com/t5/azure-paas-blog/azure-managed-redis-deployment-automation/ba-p/4547874",
-      "published": "2026-08-21T14:26:48+00:00",
-      "summary": "Sometimes we may see some temporary capacity restrictions on some Azure Regions, while deploying Azure Managed Redis (AMR), and when that happen, the recommendation is usually retrying using a different Azure Region, a different AMR SKU, or retrying during off-peak hours or weekends.Retrying the...",
-      "blog": "Azure PaaS",
-      "blogId": "azurepaasblog",
-      "author": "LuisFilipe"
-    },
-    {
-      "title": "Announcing Azure Web PubSub chat in public preview",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-web-pubsub-chat-in-public-preview/ba-p/4548907",
-      "published": "2026-08-21T09:31:22+00:00",
-      "summary": "Chat is becoming a standard interaction model across customer support, collaboration, gaming, marketplaces, healthcare, financial services, and AI-powered applications. But building a production-ready chat system involves much more than opening a WebSocket connection. Teams also need to manage...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "kevinguo"
-    },
-    {
-      "title": "Browser automation with Pydantic-AI + Playwright",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/browser-automation-with-pydantic-ai-playwright/ba-p/4547971",
-      "published": "2026-08-20T21:42:16+00:00",
-      "summary": "When we build agents, we often want to give them the ability to browse the web: open webpages, navigate from one page to the other, and read the content of a webpage. By combining Pydantic AI with the Playwright capability from Pydantic AI Harness, we can build agents that browse the web safely and...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Pamela_Fox"
-    },
-    {
-      "title": "Give your Copilot agents real tools, without hand-wiring MCP",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/give-your-copilot-agents-real-tools-without-hand-wiring-mcp/ba-p/4548254",
-      "published": "2026-08-20T18:08:19+00:00",
-      "summary": "You’re running agents in the GitHub Copilot app - maybe three at once, each on its own branch, each working a task while you steer. It’s a good way to work, right up until an agent needs to reach outside your repo. It needs to read a SharePoint library, file a Salesforce record, or check an Outlook...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "WSilveira"
     }
   ]
 }
