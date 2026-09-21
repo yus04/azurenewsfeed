@@ -1,7 +1,61 @@
 {
-  "lastUpdated": "2026-09-20T15:45:32.548981+00:00",
-  "totalArticles": 157,
+  "lastUpdated": "2026-09-21T18:04:09.496680+00:00",
+  "totalArticles": 162,
   "articles": [
+    {
+      "title": "Virtual nodes on Azure Container Instances: a new compute layer for AKS",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/virtual-nodes-on-azure-container-instances-a-new-compute-layer/ba-p/4558080",
+      "published": "2026-09-21T16:44:41+00:00",
+      "summary": "Meet virtual nodes on ACI Azure Kubernetes Service (AKS) gives you managed Kubernetes: the full Kubernetes API without operating the control plane yourself. Virtual nodes on Azure Container Instances go a step further, letting your pods run directly on Azure's serverless container platform, with...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "hailukassa"
+    },
+    {
+      "title": "What the Azure API Management integration means for Azure Service Bus",
+      "link": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-the-azure-api-management-integration-means-for-azure/ba-p/4558087",
+      "published": "2026-09-21T16:00:00+00:00",
+      "summary": "Azure API Management now provides a generally available policy for sending messages to Azure Service Bus. Using the send-service-bus-message policy, an API request can send a message directly to a Service Bus queue or topic. This allows you to put a governed HTTP API in front of an asynchronous...",
+      "blog": "Messaging on Azure",
+      "blogId": "messagingonazureblog",
+      "author": "EldertGrootenboer"
+    },
+    {
+      "title": "Elasticsearch Vector Database on Azure: semantic search and RAG without managing a cluster",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/elasticsearch-vector-database-on-azure-semantic-search-and-rag/ba-p/4558647",
+      "published": "2026-09-21T13:34:07+00:00",
+      "summary": "With Elasticsearch Vector Database, Elastic's new serverless offering for vector workloads, Azure customers can build semantic search, retrieval-augmented generation (RAG), and agent-powered experiences. Azure Native Integrations make it easy to discover, deploy, and manage the resource through the...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "piyush05"
+    },
+    {
+      "title": "Spec-Driven Development comes to Azure Cosmos DB: The First Database Extension for GitHub Spec Kit",
+      "link": "https://devblogs.microsoft.com/cosmosdb/spec-driven-development-comes-to-azure-cosmos-db-the-first-database-extension-for-github-spec-kit/",
+      "published": "2026-09-21T07:00:11+00:00",
+      "summary": "AI coding agents can write much of an application’s code, but developers still need to review the decisions behind it. For a Cosmos DB application, that includes choosing partition keys, modeling access patterns, and configuring the client. Those decisions affect cost, performance, and reliability...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Theo van Kraay"
+    },
+    {
+      "title": "Beyond Cherry-Picking: Evaluating Text-to-Image Models",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/beyond-cherry-picking-evaluating-text-to-image-models/ba-p/4558111",
+      "published": "2026-09-21T07:00:00+00:00",
+      "summary": "In the rapidly evolving landscape of generative AI, large language model (LLM) evaluations have matured into standardized benchmark suites, Elo leaderboards, and automated judge pipelines. However, in the realm of Text-to-Image (T2I) synthesis, technical teams frequently slip back into what can...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "kinfey"
+    },
+    {
+      "title": "You Get One Exchange Left: Rethinking Azure Commitments Before February 2027",
+      "link": "https://techcommunity.microsoft.com/t5/finops-blog/you-get-one-exchange-left-rethinking-azure-commitments-before/ba-p/4552401",
+      "published": "2026-09-21T00:03:58+00:00",
+      "summary": "Azure gives you two main ways to pay less by committing up front. A reservation gets you the deepest discount, but you are locking in a specific SKU in a specific region. A savings plan gives up some of that discount in exchange for freedom: you are only committing to spend a certain amount per...",
+      "blog": "FinOps",
+      "blogId": "finopsblog",
+      "author": "Madhura Amlekar"
+    },
     {
       "title": "A2A Endpoints and A2A Tool in Microsoft Foundry agents",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/a2a-endpoints-and-a2a-tool-in-microsoft-foundry-agents/ba-p/4557115",
@@ -1405,15 +1459,6 @@
       "blog": "Azure Virtual Desktop",
       "blogId": "azurevirtualdesktopblog",
       "author": "TomHickling"
-    },
-    {
-      "title": "Today I will… Modernize a .NET application",
-      "link": "https://devblogs.microsoft.com/visualstudio/today-i-will-modernize-a-net-application/",
-      "published": "2026-08-21T17:00:45+00:00",
-      "summary": "Today I will modernize a .NET Framework application to .NET 10 using the GitHub Copilot modernization tooling built-in to Visual Studio. The tooling helps us upgrade applications running on legacy versions of .NET and also migrate them to Azure. Today we’re going to focus on the upgrade portion....",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Matt Soucoup, Pablo Lopes"
     }
   ]
 }
