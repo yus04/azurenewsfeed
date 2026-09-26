@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-09-25T16:54:34.022171+00:00",
-  "totalArticles": 165,
+  "lastUpdated": "2026-09-26T16:05:38.170781+00:00",
+  "totalArticles": 167,
   "articles": [
+    {
+      "title": "From Camera to Canvas: How Multimodal GenAI Automates Shop Floor Instructions",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-camera-to-canvas-how-multimodal-genai-automates-shop-floor/ba-p/4557740",
+      "published": "2026-09-25T18:56:13+00:00",
+      "summary": "Scenario Across the industry, manufacturing organizations spend significant engineering effort converting tribal knowledge and assembly demonstrations into standardized work instructions. This process is traditionally manual, inconsistent, and difficult to scale across plants, product lines, and...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "Matt_Kazanowsky"
+    },
+    {
+      "title": "DeepSeek-V4.1-Flash is coming to Microsoft Foundry",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/deepseek-v4-1-flash-is-coming-to-microsoft-foundry/ba-p/4556431",
+      "published": "2026-09-25T15:58:46+00:00",
+      "summary": "Agentic applications increasingly need to process entire code repositories, large document collections, images, tool results, and long-running conversation histories. As that context grows, the key-value, or KV, cache maintained during inference can become a major constraint on cost, memory, and...",
+      "blog": "Azure AI Foundry",
+      "blogId": "azure-ai-foundry-blog",
+      "author": "RashaudSavage"
+    },
+    {
+      "title": "Troubleshooting Azure Storage Deletion: Immutability, WORM, and Version Retention",
+      "link": "https://techcommunity.microsoft.com/t5/azure-paas-blog/troubleshooting-azure-storage-deletion-immutability-worm-and/ba-p/4559051",
+      "published": "2026-09-25T04:15:53+00:00",
+      "summary": "One of the most common questions Azure Storage administrators ask after enabling immutable storage is: \"Why can't I delete my storage account anymore?\" Azure Immutable Storage is designed to provide WORM (Write Once, Read Many) protection, ensuring that data cannot be modified or deleted during a...",
+      "blog": "Azure PaaS",
+      "blogId": "azurepaasblog",
+      "author": "carlosbermudezlopez"
+    },
     {
       "title": "Introducing voice agents in Microsoft Foundry",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-voice-agents-in-microsoft-foundry/ba-p/4557276",
@@ -10,6 +37,42 @@
       "blog": "Azure AI Foundry",
       "blogId": "azure-ai-foundry-blog",
       "author": "Yiwen_Rong"
+    },
+    {
+      "title": "Connect Azure Functions to more services with managed connectors",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/connect-azure-functions-to-more-services-with-managed-connectors/ba-p/4558711",
+      "published": "2026-09-24T20:40:53+00:00",
+      "summary": "Azure Functions can already connect to many Azure services through triggers and bindings. With managed connectors, your functions can access about 1,700 connectors across services such as Microsoft 365, Microsoft Teams, Dataverse, SharePoint, OneDrive, and third-party systems. Connector triggers...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "lily-ma"
+    },
+    {
+      "title": "Getting the best out of Azure SRE Agent",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/getting-the-best-out-of-azure-sre-agent/ba-p/4559745",
+      "published": "2026-09-24T20:24:01+00:00",
+      "summary": "A common question that we get from our customers is \"Hey guys, we are excited about SRE agent and we 've created one but whats the best way to configure it?\". The below guide aims at sharing some of the best practices that anyone can follow to make the most out of our SRE Agent. This guide is based...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "puneetguptams"
+    },
+    {
+      "title": "Introducing bicep docs: generate documentation from your Bicep modules",
+      "link": "https://techcommunity.microsoft.com/t5/azure-tools-blog/introducing-bicep-docs-generate-documentation-from-your-bicep/ba-p/4559737",
+      "published": "2026-09-24T19:55:33+00:00",
+      "summary": "TL;DR: The Bicep CLI has a new experimental command, bicep docs generate. Point it at a Bicep module and it writes a README.md next to it that describes the module's resources, parameters, types, outputs and usage examples, all read straight from your code. You can change the layout with your own...",
+      "blog": "Azure Tools",
+      "blogId": "azuretoolsblog",
+      "author": "jaredfholgate"
+    },
+    {
+      "title": "IBC Reflections and Where Media is Headed",
+      "link": "https://techcommunity.microsoft.com/t5/telecommunications-media/ibc-reflections-and-where-media-is-headed/ba-p/4559411",
+      "published": "2026-09-24T19:00:00+00:00",
+      "summary": "Over the last several years, it has been easy to focus on the magical experiences produced with AI-generated content. The media industry has responded with growing short-form video, IP licensing for quality AI generated content, and various other approaches, but the core end-to-end workflows and...",
+      "blog": "Telecommunications",
+      "blogId": "telecommunications-industry-blog",
+      "author": "kshatzkamer"
     },
     {
       "title": "Control where your hosted agent connects with network egress in Foundry Agent Service",
@@ -28,6 +91,15 @@
       "blog": "Azure AI Foundry",
       "blogId": "azure-ai-foundry-blog",
       "author": "katelynrothney"
+    },
+    {
+      "title": "Oracle AI Database@Azure Expands with Azure Native Oracle GoldenGate User Experience, Observability",
+      "link": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-ai-database-azure-expands-with-azure-native-oracle/ba-p/4559430",
+      "published": "2026-09-24T17:29:07+00:00",
+      "summary": "Customers running mission-critical Oracle workloads on Azure want more than database infrastructure in an Azure datacenter. They want their Oracle environments to fit naturally into the way their teams already build, govern, monitor, and purchase services on Azure. Today, Oracle AI Database@Azure...",
+      "blog": "Oracle on Azure",
+      "blogId": "oracleonazureblog",
+      "author": "RajyaLaxmiYellajosyula"
     },
     {
       "title": "Migrate Data Ingestion from Data Collector to Log Ingestion - Part 2",
@@ -102,15 +174,6 @@
       "author": "Jan-Kalis"
     },
     {
-      "title": "DeepSeek-V4.1-Flash is coming to Microsoft Foundry",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/deepseek-v4-1-flash-is-coming-to-microsoft-foundry/ba-p/4556431",
-      "published": "2026-09-23T21:44:16+00:00",
-      "summary": "Agentic applications increasingly need to process entire code repositories, large document collections, images, tool results, and long-running conversation histories. As that context grows, the key-value, or KV, cache maintained during inference can become a major constraint on cost, memory, and...",
-      "blog": "Azure AI Foundry",
-      "blogId": "azure-ai-foundry-blog",
-      "author": "RashaudSavage"
-    },
-    {
       "title": "Catalyst: Frontier stories of AI Infrastructure innovation",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/catalyst-frontier-stories-of-ai-infrastructure-innovation/ba-p/4559362",
       "published": "2026-09-23T17:05:19+00:00",
@@ -172,15 +235,6 @@
       "blog": "Linux & Open Source",
       "blogId": "linuxandopensourceblog",
       "author": "CollinBrian"
-    },
-    {
-      "title": "Connect Azure Functions to more services with managed connectors",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/connect-azure-functions-to-more-services-with-managed-connectors/ba-p/4558711",
-      "published": "2026-09-22T19:51:43+00:00",
-      "summary": "Azure Functions can already connect to many Azure services through triggers and bindings. With managed connectors, your functions can access about 1,700 connectors across services such as Microsoft 365, Microsoft Teams, Dataverse, SharePoint, OneDrive, and third-party systems. Connector triggers...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "lily-ma"
     },
     {
       "title": "Change Analysis in Azure Resource Graph: Your first stop for “What changed?”",
@@ -1450,42 +1504,6 @@
       "blog": "Azure SDK Blog",
       "blogId": "azuresdkblog",
       "author": "Kristen Womack, Jeffrey C."
-    },
-    {
-      "title": "VSLive! @ Microsoft HQ: Developer Takeaways and Must-Watch Sessions",
-      "link": "https://devblogs.microsoft.com/visualstudio/vslive-hq-content-sandiego-and-orlando-mentions/",
-      "published": "2026-08-27T14:00:09+00:00",
-      "summary": "VSLive! @ Microsoft HQ 2026 was one of the most energizing VSLive! events I’ve attended. What stood out was the level of engagement over five days of learning and conversation from July 27 through July 31. Developers came ready to dig into the future of Visual Studio, .NET, and AI-assisted software...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "James Rempt"
-    },
-    {
-      "title": "Azure DevOps in the GitHub Copilot App",
-      "link": "https://devblogs.microsoft.com/devops/azure-devops-in-the-github-copilot-app/",
-      "published": "2026-08-27T11:24:17+00:00",
-      "summary": "The Azure DevOps plugin is now available for the GitHub Copilot app, allowing you to view and manage Azure DevOps pull requests and work items directly in the Copilot app. What you can do The initial release supports: View your work items and pull requests from My Work Open work items and pull...",
-      "blog": "Azure DevOps Blog",
-      "blogId": "azuredevops",
-      "author": "Dan Hellem"
-    },
-    {
-      "title": "Stop restricting the agent. Start restricting its environment.",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-restricting-the-agent-start-restricting-its-environment/ba-p/4548726",
-      "published": "2026-08-26T18:48:33+00:00",
-      "summary": "Thanks to visagarwal​ for co-authoring this post. Cross-posted from: https://commandline.microsoft.com/azure-sre-agent-restricting-environment-ai-safety/ Azure SRE Agent gives an LLM tools, a code execution environment, and access to production resources. The first question most people ask is: “How...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "sanchitmehta"
-    },
-    {
-      "title": "Retirement of Microsoft HPC Pack",
-      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/retirement-of-microsoft-hpc-pack/ba-p/4550183",
-      "published": "2026-08-26T16:54:57+00:00",
-      "summary": "Overview Microsoft HPC Pack is a Windows‑based high‑performance computing (HPC) scheduler that enables customers to deploy, manage, and operate HPC workloads in on‑premises and hybrid environments. Since its original release, HPC Pack has supported a range of Windows‑centric HPC scenarios,...",
-      "blog": "High Performance Computing",
-      "blogId": "azurehighperformancecomputingblog",
-      "author": "XinXin"
     }
   ]
 }
