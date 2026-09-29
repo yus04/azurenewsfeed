@@ -1,7 +1,79 @@
 {
-  "lastUpdated": "2026-09-28T19:28:12.149648+00:00",
-  "totalArticles": 165,
+  "lastUpdated": "2026-09-29T17:55:05.200249+00:00",
+  "totalArticles": 174,
   "articles": [
+    {
+      "title": "AKS on bare metal now on Ubuntu",
+      "link": "https://blog.aks.azure.com/2026/09/25/aks-baremetal-ubuntu",
+      "published": "2026-09-30T00:00:00+00:00",
+      "summary": "Run Azure Kubernetes Service on customer-owned Ubuntu infrastructure with bare metal performance, flexible hardware choices, and consistent Azure management.",
+      "blog": "AKS Blog",
+      "blogId": "aksblog",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Announcing General Availability of Azure Lasv5 and Laosv5 VMs Based on 5th Gen AMD EPYC™ processors",
+      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-lasv5-and-laosv5-vms/ba-p/4552700",
+      "published": "2026-09-29T17:50:50+00:00",
+      "summary": "We’re excited to announce the general availability of Azure Lasv5 and Laosv5 local storage optimized virtual machines, powered by 5th Generation AMD EPYC™ (“Turin\") processors. Designed for data-intensive workloads that demand high local disk capacity, throughput, and I/O performance, these new VM...",
+      "blog": "Azure Compute",
+      "blogId": "azurecompute",
+      "author": "sarah-zhou"
+    },
+    {
+      "title": "WSLC Architecture deep dive",
+      "link": "https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/",
+      "published": "2026-09-29T17:00:19+00:00",
+      "summary": "WSL containers is now generally available! Check out this blog post to learn more about this overall feature enabling seamless access to Linux containers on Windows via the new “wslc.exe” command. This new Linux container platform comes with multiple architectures changes compared to WSL, which...",
+      "blog": "Windows Command Line",
+      "blogId": "commandline",
+      "author": "Pierre Boulay"
+    },
+    {
+      "title": "Visual Studio September Update – Power Your Workflow with Your Model",
+      "link": "https://devblogs.microsoft.com/visualstudio/visual-studio-september-update-power-your-workflow-with-your-model/",
+      "published": "2026-09-29T16:00:04+00:00",
+      "summary": "Bring your own AI model with updates to BYOM, fix NuGet vulnerabilities from the Error List, explore pull requests with the Git agent, see which operand decides an if condition, and attach to Podman containers. The post Visual Studio September Update – Power Your Workflow with Your Model appeared...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Mark Downie"
+    },
+    {
+      "title": "DiskANN Vector Index and Vector Search Are Now Generally Available in Azure SQL",
+      "link": "https://devblogs.microsoft.com/azure-sql/diskann-vector-index-search-are-now-generally-available-in-azure-sql/",
+      "published": "2026-09-29T15:00:22+00:00",
+      "summary": "Today, we are announcing the general availability of DiskANN Vector Index & Search across Azure SQL Database, Azure SQL Managed Instance with the always-up-to-date update policy, and SQL database in Microsoft Fabric. DiskANN brings scalable approximate nearest-neighbor search directly to the SQL...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Pooja Kamath"
+    },
+    {
+      "title": "What’s new across Microsoft SQL at SQLCon/FabCon Europe 2026",
+      "link": "https://devblogs.microsoft.com/azure-sql/whats-new-across-microsoft-sql-at-sqlcon-fabcon-europe-2026/",
+      "published": "2026-09-29T07:30:04+00:00",
+      "summary": "Live From Barcelona Woo! I’m posting this live from the first ever European SQLCon (joint conference with FabCon EU), and the second ever SQLCon. The energy here is great, as the community comes together in Barcelona and as we prepare to go on the keynote stage and share what’s new! A heartfelt nod...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Anna Hoffman"
+    },
+    {
+      "title": "How to build an app on Azure SQL with an AI coding agent",
+      "link": "https://devblogs.microsoft.com/azure-sql/build-app-azure-sql-ai-coding-agent/",
+      "published": "2026-09-29T07:05:16+00:00",
+      "summary": "Developers have trusted SQL for decades, since long before AI existed. Now coding agents help choose the database, and they favor the one they can get running in the first few minutes. So today we’re shipping two things for that moment. Microsoft SQL Agent Skills teach your coding agent how Azure...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Iqra Shaikh"
+    },
+    {
+      "title": "Announcing Public Preview for Azure Cosmos DB in Fabric Database Hub!",
+      "link": "https://devblogs.microsoft.com/cosmosdb/announcing-public-preview-for-azure-cosmos-db-in-fabric-database-hub/",
+      "published": "2026-09-29T07:00:00+00:00",
+      "summary": "Azure Cosmos DB support in Fabric Database Hub is now available in public preview. For the first time, Azure Cosmos DB customers can discover and monitor their accounts from Database Hub alongside other Microsoft database engines. Database Hub provides a single place to view every Azure Cosmos DB...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Jai Maldonado"
+    },
     {
       "title": "MSSQL Extension for VS Code: New Getting Started Page, Agent skills, SQL Formatter, and more",
       "link": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-september2026/",
@@ -48,6 +120,15 @@
       "author": "Umachandar Jayachandran (UC)"
     },
     {
+      "title": "From Domain Lists to Decisions: Scaling WHOIS Threat Intelligence with MDTI and Microsoft Graph",
+      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/from-domain-lists-to-decisions-scaling-whois-threat-intelligence/ba-p/4560384",
+      "published": "2026-09-28T12:23:10+00:00",
+      "summary": "The real problem isn't WHOIS. It's what WHOIS costs you at scale. Ask any SOC analyst whether WHOIS data is useful and they'll say yes without hesitation. Registrant emails, creation dates, registrars, and nameservers are among the most durable pivots in domain-based threat intelligence — the...",
+      "blog": "Core Infrastructure & Security",
+      "blogId": "coreinfrastructureandsecurityblog",
+      "author": "absharan"
+    },
+    {
       "title": "From Jev to Your Laptop: Building \"System One\" Decision Models in ONNX with Mobius",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-jev-to-your-laptop-building-quot-system-one-quot-decision/ba-p/4558843",
       "published": "2026-09-28T06:11:14+00:00",
@@ -55,6 +136,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "kinfey"
+    },
+    {
+      "title": "Updating Purview DLP Sensitive Service Domain Groups with PowerShell",
+      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updating-purview-dlp-sensitive-service-domain-groups-with/ba-p/4560220",
+      "published": "2026-09-28T05:10:31+00:00",
+      "summary": "Introduction Microsoft Purview Data Loss Prevention (DLP) can use Sensitive Service Domain Groups to organize websites and other network destinations that are referenced by endpoint DLP rules. Administrators can manage these settings in the Purview portal, while PowerShell is useful when changes...",
+      "blog": "Core Infrastructure & Security",
+      "blogId": "coreinfrastructureandsecurityblog",
+      "author": "SantoshPargi"
     },
     {
       "title": "CoreDNS in AKS: service discovery, upstream DNS, and failover",
@@ -1459,15 +1549,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "spalani"
-    },
-    {
-      "title": "Bacpac and Dacpac, the similarities and differences",
-      "link": "https://devblogs.microsoft.com/azure-sql/bacpac-and-dacpac-the-similarities-and-differences/",
-      "published": "2026-08-31T15:13:57+00:00",
-      "summary": "When you need to move an entire database or move the objects in a database, bacpac and dacpac files often come up because of all of the tooling options to interact with them. Bacpac and dacpac files share some core similarities as well as some major differences in how they’re used in SqlPackage and...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Drew Skwiers-Koballa"
     },
     {
       "title": "BizTalk Server 2020 End-of-Sale Announcement",
