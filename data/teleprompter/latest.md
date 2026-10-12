@@ -1,5 +1,5 @@
 ============================================================
-ROTEIRO - AZURE NEWS DIÁRIO - 09/10/2026
+ROTEIRO - AZURE NEWS DIÁRIO - 12/10/2026
 ============================================================
 
 [ABERTURA]
@@ -7,71 +7,26 @@ ROTEIRO - AZURE NEWS DIÁRIO - 09/10/2026
 E aí pessoal, tudo bem?
 [PAUSA]
 Bem-vindos a mais um Azure News Diário.
-Hoje é dia 09/10/2026.
-Temos 7 atualizações para cobrir.
+Hoje é dia 12/10/2026.
+Temos 2 atualizações para cobrir.
 Vamos direto ao ponto.
+[PAUSA]
+
+----------------------------------------
+[BLOCO: Apps on Azure]
+
+  ► Qwen3.8-Flash-Next on two H100s in an Azure Spot VM
+    With 150,000 tokens of context, one request to Qwen3.8-Flash-Next decoded at about 200 tokens a second, and its first token arrived in under a second,
+    Link: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/qwen3-8-flash-next-on-two-h100s-in-an-azure-spot-vm/ba-p/4563893
+
 [PAUSA]
 
 ----------------------------------------
 [BLOCO: Azure Infrastructure]
 
-  ► Microsoft at OCP Global Summit 2026
-    At OCP Global Summit 2026, Microsoft will showcase how we’re advancing the infrastructure needed to scale AI, from silicon and systems to the datacent
-    Link: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/microsoft-at-ocp-global-summit-2026/ba-p/4562337
-
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Azure PaaS]
-
-  ► Azure Managed Redis Deployment Automation
-    Sometimes we may see some temporary capacity restrictions on some Azure Regions, while deploying Azure Managed Redis (AMR), and when that happen, the 
-    Link: https://techcommunity.microsoft.com/t5/azure-paas-blog/azure-managed-redis-deployment-automation/ba-p/4547874
-
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Azure Cosmos DB Blog]
-
-  ► Introducing the Native Confluent Cloud Connector Experience in Azure Cosmos DB!
-    Co-authored with Praveen Raja P Azure Cosmos DB already includes a powerful event foundation: change feed provides a durable, ordered record of item c
-    Link: https://devblogs.microsoft.com/cosmosdb/introducing-the-native-confluent-cloud-connector-experience-in-azure-cosmos-db/
-
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Azure Tools]
-
-  ► Azure CLI on macOS got security upgrade: native broker authentication
-    Why we built this If you manage Azure resources from a Mac today, az login opens a browser tab, you sign in, and a token comes back to the CLI. That's
-    Link: https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-on-macos-got-security-upgrade-native-broker/ba-p/4563073
-
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Analytics on Azure]
-
-  ► Optimizing Oracle-to-Power BI Performance and the Path to Modern Analytics
-    Organizations frequently rely on Oracle databases for large-scale operational workloads while using Microsoft Power BI as their enterprise analytics a
-    Link: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/optimizing-oracle-to-power-bi-performance-and-the-path-to-modern/ba-p/4563061
-
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Azure AI Foundry]
-
-  ► Evaluating Voice Agents: How Reliable Are Foundry's Multi-turn Evaluators?
-    Teams developing voice agents need automated evaluation because human review alone cannot keep pace with thousands of calls and frequent agent updates
-    Link: https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/evaluating-voice-agents-how-reliable-are-foundry-s-multi-turn/ba-p/4559697
-
-[PAUSA]
-
-----------------------------------------
-[BLOCO: Azure SDK Blog]
-
-  ► Dynamic Workflows in Azure Functions Hosted Skills: Durable, AI-Led Work for Event-Driven Apps
-    Azure Functions is the event-driven application platform, and Hosted Skills adds AI reasoning to your app. Dynamic Workflows give the app a durable wa
-    Link: https://devblogs.microsoft.com/azure-sdk/dynamic-workflows-azure-functions-hosted-skills/
+  ► Advancing AI fleet reliability through industry collaboration
+    Customers depend on reliable infrastructure to run workloads at scale. As AI infrastructure continues to expand, ensuring fleet capacity, availability
+    Link: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-ai-fleet-reliability-through-industry-collaboration/ba-p/4563353
 
 [PAUSA]
 
