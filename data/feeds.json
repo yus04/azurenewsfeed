@@ -1,7 +1,61 @@
 {
-  "lastUpdated": "2026-10-15T16:38:08.230979+00:00",
-  "totalArticles": 200,
+  "lastUpdated": "2026-10-16T16:22:35.240236+00:00",
+  "totalArticles": 195,
   "articles": [
+    {
+      "title": "Threat Modeling Azure MCP: Securing AI-Assisted Infrastructure Operations",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/threat-modeling-azure-mcp-securing-ai-assisted-infrastructure/ba-p/4564892",
+      "published": "2026-10-16T15:14:27+00:00",
+      "summary": "An engineer opens an Azure incident and asks an AI assistant: \"Why is this application slow?\" The assistant queries Azure Monitor, reviews Log Analytics results, inspects an App Service configuration, and compares the affected resource with a healthy deployment. The investigation that once required...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "abhilashasr"
+    },
+    {
+      "title": "Migrating Azure Cosmos DB Across Regions",
+      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/migrating-azure-cosmos-db-across-regions/ba-p/4564983",
+      "published": "2026-10-16T04:38:18+00:00",
+      "summary": "What this article delivers? A decision-oriented, implementation-ready walkthrough based on a hands-on Azure Cosmos DB for NoSQL lab. It corrects the online copy sequence, includes the required Azure CLI snippets, and separates migration duration from application cutover downtime. Regional migration...",
+      "blog": "Analytics on Azure",
+      "blogId": "analyticsonazure",
+      "author": "Rafia_Aqil"
+    },
+    {
+      "title": "Optimizing Oracle-to-Power BI Performance and the Path to Modern Analytics",
+      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/optimizing-oracle-to-power-bi-performance-and-the-path-to-modern/ba-p/4563061",
+      "published": "2026-10-16T04:12:58+00:00",
+      "summary": "Organizations frequently rely on Oracle databases for large-scale operational workloads while using Microsoft Power BI as their enterprise analytics and visualization platform. Although connecting Power BI directly to Oracle is fully supported, performance can become challenging as datasets grow...",
+      "blog": "Analytics on Azure",
+      "blogId": "analyticsonazure",
+      "author": "Rafia_Aqil"
+    },
+    {
+      "title": "What’s new in Microsoft Foundry | September 2026",
+      "link": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-september-2026/",
+      "published": "2026-10-16T02:04:50+00:00",
+      "summary": "Explore September's models, Routines, Tool Search, Model Router, and Insights through one two-agent workflow that turns public releases into a Foundry developer changelog. The post What’s new in Microsoft Foundry | September 2026 appeared first on Microsoft Foundry Blog.",
+      "blog": "Microsoft Foundry Blog",
+      "blogId": "foundryblog",
+      "author": "Nick Brady"
+    },
+    {
+      "title": "Azure Container Apps Sandboxes, Now Generally Available",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-apps-sandboxes-now-generally-available/ba-p/4559125",
+      "published": "2026-10-15T23:31:23+00:00",
+      "summary": "Agents Act. You Set the Limits. Your platform needs to run untrusted code. Agents choose actions at runtime, from installing packages to calling APIs. In a multi-tenant service, you have to support both without letting one customer's code reach another customer's data. That requires an execution...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "JanKalis"
+    },
+    {
+      "title": "Generally Available: Automatic Zone Balance for Virtual Machine Scale Sets",
+      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/generally-available-automatic-zone-balance-for-virtual-machine/ba-p/4562654",
+      "published": "2026-10-15T22:38:30+00:00",
+      "summary": "We’re excited to announce the general availability of automatic zone balance for Virtual Machine Scale Sets. Automatic zone balance continuously monitors your scale set and redistributes VM instances across availability zones, reducing the risk that a single-zone failure disproportionately impacts...",
+      "blog": "Azure Compute",
+      "blogId": "azurecompute",
+      "author": "HilaryWang"
+    },
     {
       "title": "Stop waiting on a failed build",
       "link": "https://devblogs.microsoft.com/visualstudio/stop-waiting-on-a-failed-build/",
@@ -361,15 +415,6 @@
       "blog": "Azure Tools",
       "blogId": "azuretoolsblog",
       "author": "Alex-wdy"
-    },
-    {
-      "title": "Optimizing Oracle-to-Power BI Performance and the Path to Modern Analytics",
-      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/optimizing-oracle-to-power-bi-performance-and-the-path-to-modern/ba-p/4563061",
-      "published": "2026-10-09T01:46:15+00:00",
-      "summary": "Organizations frequently rely on Oracle databases for large-scale operational workloads while using Microsoft Power BI as their enterprise analytics and visualization platform. Although connecting Power BI directly to Oracle is fully supported, performance can become challenging as datasets grow...",
-      "blog": "Analytics on Azure",
-      "blogId": "analyticsonazure",
-      "author": "Rafia_Aqil"
     },
     {
       "title": "Evaluating Voice Agents: How Reliable Are Foundry's Multi-turn Evaluators?",
@@ -1416,15 +1461,6 @@
       "author": "Microsoft"
     },
     {
-      "title": "Azure Container Apps Sandboxes, Now Generally Available",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-apps-sandboxes-now-generally-available/ba-p/4559125",
-      "published": "2026-09-23T23:33:57+00:00",
-      "summary": "Agents Act. You Set the Limits. Your platform needs to run untrusted code. Agents choose actions at runtime, from installing packages to calling APIs. In a multi-tenant service, you have to support both without letting one customer's code reach another customer's data. That requires an execution...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "JanKalis"
-    },
-    {
       "title": "Catalyst: Frontier stories of AI Infrastructure innovation",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/catalyst-frontier-stories-of-ai-infrastructure-innovation/ba-p/4559362",
       "published": "2026-09-23T17:05:19+00:00",
@@ -1720,87 +1756,6 @@
       "blog": "Confidential Computing",
       "blogId": "azureconfidentialcomputingblog",
       "author": "Deepak_JV"
-    },
-    {
-      "title": "Azure Delivers Strong MLPerf Inference v6.1 Results with NVIDIA GB300 & GB200",
-      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-delivers-strong-mlperf-inference-v6-1-results-with-nvidia/ba-p/4552364",
-      "published": "2026-09-16T15:25:04+00:00",
-      "summary": "By Mark Gitau and Azin Heidarshenas In the MLPerf Inference v6.1 round, Azure demonstrated strong Deepseek-R1 performance on GB300 NVL72 and GB200 NVL72 platforms. Azure submitted GB200 results at 18-node (1-rack) and 72-node (4-rack) scale, and GB300 results at 18 nodes (1 rack), marking our first...",
-      "blog": "High Performance Computing",
-      "blogId": "azurehighperformancecomputingblog",
-      "author": "Mark_Gitau"
-    },
-    {
-      "title": "AI Is Changing How We Code. It’s Also Changing How We Learn.",
-      "link": "https://devblogs.microsoft.com/visualstudio/ai-is-changing-how-we-code-its-also-changing-how-we-learn/",
-      "published": "2026-09-16T14:00:09+00:00",
-      "summary": "AI is changing software development at a pace no one can ignore. Developers now have powerful AI tools that can help us write code, understand unfamiliar codebases, troubleshoot problems, learn new frameworks, and get answers in seconds. That is an incredible opportunity. But as these tools become...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "James Rempt"
-    },
-    {
-      "title": "Your AI coding agent evaluation is only as good as its sandbox",
-      "link": "https://devblogs.microsoft.com/blog/your-ai-coding-agent-evaluation-is-only-as-good-as-its-sandbox/",
-      "published": "2026-09-16T09:09:51+00:00",
-      "summary": "Your AI coding agent passed the eval. But did the model know the answer, or did it find it somewhere on your machine? A correct answer can still invalidate your measurement.",
-      "blog": "Microsoft Developers Blog",
-      "blogId": "msdevblog",
-      "author": "Waldek Mastykarz"
-    },
-    {
-      "title": "Deploying Custom Images and Implementing CI/CD for Azure Virtual Machine Scale Sets",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-custom-images-and-implementing-ci-cd-for-azure-virtual/ba-p/4556902",
-      "published": "2026-09-16T05:26:11+00:00",
-      "summary": "Azure Virtual Machine Scale Sets (VMSS) are useful when an application needs to run across multiple virtual machines while automatically scaling based on demand. Instead of configuring every VM manually, we can create a standard VM image and use that image to provision identical VM instances. In...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "SurbhiA"
-    },
-    {
-      "title": "Closing the Recruiting Context Gap with Microsoft Foundry",
-      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/closing-the-recruiting-context-gap-with-microsoft-foundry/ba-p/4556469",
-      "published": "2026-09-15T23:26:42+00:00",
-      "summary": "A recruiter receives a detailed job description for a senior engineer working on a payments platform. It explains the required skills, the business domain, and the experience that would be useful. Then someone has to turn that description into a search. What reaches the sourcing platform might look...",
-      "blog": "Azure Architecture",
-      "blogId": "azurearchitectureblog",
-      "author": "gauravbhardwaj"
-    },
-    {
-      "title": "Introducing Foundry Dev Pack: One Command to Start Building",
-      "link": "https://devblogs.microsoft.com/foundry/foundry-devpack-announcement/",
-      "published": "2026-09-15T19:00:00+00:00",
-      "summary": "Foundry Dev Pack prepares your machine for Microsoft Foundry development with an all-in-one installer for the tools you need across the terminal, VS Code, and coding agents. The post Introducing Foundry Dev Pack: One Command to Start Building appeared first on Microsoft Foundry Blog.",
-      "blog": "Microsoft Foundry Blog",
-      "blogId": "foundryblog",
-      "author": "sharonxu"
-    },
-    {
-      "title": "Public Preview Annoucement: Azure Policy Custom Policy Versioning!",
-      "link": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/public-preview-annoucement-azure-policy-custom-policy-versioning/ba-p/4556461",
-      "published": "2026-09-15T18:02:19+00:00",
-      "summary": "In 2024 we introduced versioning for built-in definitions and initiatives. Today we are extending that capability to your own policies! Custom policy versioning is now in public preview. Custom definitions and custom initiatives can store and reference multiple versions under a single definition...",
-      "blog": "Governance & Management",
-      "blogId": "azuregovernanceandmanagementblog",
-      "author": "stevenbucher"
-    },
-    {
-      "title": "Bring Azure AI to your private workloads on Azure VMware Solution",
-      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/bring-azure-ai-to-your-private-workloads-on-azure-vmware/ba-p/4556780",
-      "published": "2026-09-15T17:26:58+00:00",
-      "summary": "Overview A global enterprise has migrated thousands of VMware vSphere virtual machines (VMs) to Microsoft Azure as part of their application modernization strategy. Having exited their on-premises data centers and relocated their legacy application VMs to Azure VMware Solution, the next phase of...",
-      "blog": "Azure Migration",
-      "blogId": "azuremigrationblog",
-      "author": "rvandenbedem"
-    },
-    {
-      "title": "Explore the latest in MCP: All recordings from MCP Live!",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/explore-the-latest-in-mcp-all-recordings-from-mcp-live/ba-p/4556775",
-      "published": "2026-09-15T16:44:03+00:00",
-      "summary": "We recently hosted MCP Live!, a free half-day event featuring the people building the Model Context Protocol and putting it into practice. The Model Context Protocol (MCP) is the open standard for connecting AI models to tools and data. MCP servers let agents work with external data sources and...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Pamela_Fox"
     }
   ]
 }
