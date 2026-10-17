@@ -1,7 +1,25 @@
 {
-  "lastUpdated": "2026-10-16T16:22:35.240236+00:00",
-  "totalArticles": 195,
+  "lastUpdated": "2026-10-17T15:16:42.330885+00:00",
+  "totalArticles": 192,
   "articles": [
+    {
+      "title": "Troubleshoot Hyper-V guarded fabrics and shielded VMs",
+      "link": "https://techcommunity.microsoft.com/t5/itops-talk-blog/troubleshoot-hyper-v-guarded-fabrics-and-shielded-vms/ba-p/4565441",
+      "published": "2026-10-17T04:44:13+00:00",
+      "summary": "Use this FAQ when a guarded fabric can't be deployed, a host can't attest, a shielded virtual machine (VM) can't be provisioned or started, or an operation such as migration, servicing, or recovery fails. It accompanies the Microsoft Learn module:...",
+      "blog": "ITOpsTalk",
+      "blogId": "itopstalkblog",
+      "author": "OrinThomas"
+    },
+    {
+      "title": "Muse Spark Open is available in Microsoft Foundry Models",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/muse-spark-open-is-available-in-microsoft-foundry-models/ba-p/4564585",
+      "published": "2026-10-16T16:46:17+00:00",
+      "summary": "Building useful coding agents takes more than generating code. Agents need to analyze an existing codebase, work across files and dependencies, use tools reliably, and keep making progress as a task evolves. Muse Spark Open, a coding-optimized open-weight model from Meta, is available today in...",
+      "blog": "Azure AI Foundry",
+      "blogId": "azure-ai-foundry-blog",
+      "author": "MaheshBalachandran"
+    },
     {
       "title": "Threat Modeling Azure MCP: Securing AI-Assisted Infrastructure Operations",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/threat-modeling-azure-mcp-securing-ai-assisted-infrastructure/ba-p/4564892",
@@ -10,6 +28,24 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "abhilashasr"
+    },
+    {
+      "title": "Information Extraction with Low-Inference-Cost Models: 85% F1 Gain via Foundry Interactive Training",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/information-extraction-with-low-inference-cost-models-85-f1-gain/ba-p/4563661",
+      "published": "2026-10-16T14:00:00+00:00",
+      "summary": "The task: turn documents into structured data Many business workflows need to turn documents into structured data. The model must find the right values, capture the requested records, and return output the next system can use. Long documents and repeated tables make this harder. We tested...",
+      "blog": "Azure AI Foundry",
+      "blogId": "azure-ai-foundry-blog",
+      "author": "shihyaolin"
+    },
+    {
+      "title": "SQL developer tools at SQL Modernization Day",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/sql-developer-tools-at-sql-modernization-day/ba-p/4562634",
+      "published": "2026-10-16T07:00:00+00:00",
+      "summary": "SQL developers can now do most of their database work without leaving VS Code. The MSSQL extension ships updates every month, GitHub Copilot understands your schema, and the Microsoft SQL drivers keep pace with SQL Server 2025. And new Microsoft SQL skills, now in public preview, let your coding...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "RicardoDuncan"
     },
     {
       "title": "Migrating Azure Cosmos DB Across Regions",
@@ -822,15 +858,6 @@
       "author": "absharan"
     },
     {
-      "title": "Evaluate More, Spend Less: Batching Microsoft Foundry Evaluators for Efficient Evaluation",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/evaluate-more-spend-less-batching-microsoft-foundry-evaluators/ba-p/4560841",
-      "published": "2026-10-02T16:00:00+00:00",
-      "summary": "Authors: Salma Elshafey, Ali Mahmoudzadeh, Kayla Ames, Ahmad Qardahji, Vivek Bhadauria, Morteza Ziyadi, April Kwong A single agent trajectory may need to be evaluated for groundedness, coherence, instruction following, task completion, and correct tool use. In a conventional pipeline, each...",
-      "blog": "Azure AI Foundry",
-      "blogId": "azure-ai-foundry-blog",
-      "author": "selshafey"
-    },
-    {
       "title": "Enabling the Compliance Security Profile (CSP) for HIPAA on Azure Databricks",
       "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/enabling-the-compliance-security-profile-csp-for-hipaa-on-azure/ba-p/4541578",
       "published": "2026-10-02T13:43:37+00:00",
@@ -838,15 +865,6 @@
       "blog": "Analytics on Azure",
       "blogId": "analyticsonazure",
       "author": "Rafia_Aqil"
-    },
-    {
-      "title": "How to make AI responses faster on Microsoft Foundry: lessons from 2,040 measurements",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/how-to-make-ai-responses-faster-on-microsoft-foundry-lessons/ba-p/4560073",
-      "published": "2026-10-02T13:00:00+00:00",
-      "summary": "A faster model does not always make an AI application faster. Latency also comes from output length, repeated prompt content, image and document processing, tool selection, connection setup, serial waits, and extra model requests. Comparing complete configurations, optimized software plus verified...",
-      "blog": "Azure AI Foundry",
-      "blogId": "azure-ai-foundry-blog",
-      "author": "Yassine_El_Ghali"
     },
     {
       "title": "Translating an Elasticsearch Search Request to Azure Cosmos DB",
@@ -1711,51 +1729,6 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "Madhura Amlekar"
-    },
-    {
-      "title": "Automating Private Endpoint DNS Across Azure Tenants with Azure Policy and Azure Lighthouse",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-private-endpoint-dns-across-azure-tenants-with-azure/ba-p/4557495",
-      "published": "2026-09-17T14:49:01+00:00",
-      "summary": "Problem statement Azure Private Endpoints let applications connect to Azure platform services through private IP addresses. They reduce public exposure, keep traffic on private networks, and support a Zero Trust architecture. In a single Microsoft Entra tenant, Azure Policy can automatically...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "abhilashasr"
-    },
-    {
-      "title": "Automating Azure Managed Redis capacity acquisition with bounded retries",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/automating-azure-managed-redis-capacity-acquisition-with-bounded/ba-p/4546462",
-      "published": "2026-09-17T04:15:00+00:00",
-      "summary": "TL;DR: Azure Managed Redis has no capacity-reporting API. This PowerShell poller safely rotates real creation attempts across approved regions and SKUs until one succeeds. Who this is for: Azure platform engineers, application owners, and site reliability engineers who need an Azure Managed Redis...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "varghesejoji"
-    },
-    {
-      "title": "Running GitHub Actions Runner Controller on AKS Automatic",
-      "link": "https://blog.aks.azure.com/2026/09/17/github-actions-runner-controller-aks-automatic",
-      "published": "2026-09-17T00:00:00+00:00",
-      "summary": "Create an AKS Automatic cluster, install Actions Runner Controller, and run a GitHub Actions workflow on ephemeral runner pods in your Azure network.",
-      "blog": "AKS Blog",
-      "blogId": "aksblog",
-      "author": "Microsoft"
-    },
-    {
-      "title": "The bottleneck isn't AI. It's transformation capacity.",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-media/the-bottleneck-isn-t-ai-it-s-transformation-capacity/ba-p/4557214",
-      "published": "2026-09-16T19:17:48+00:00",
-      "summary": "AI everywhere, except at scale Ask almost any operator where they are with AI and the answer sounds impressive. Hundreds of potential use cases. Dozens of pilots in play. Multiple foundation models, thousands of agents, several data platforms, and a meaningful share of infrastructure already...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "MOHON"
-    },
-    {
-      "title": "Improve Campaign Reach and Measurement with Azure Confidential Clean Rooms",
-      "link": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/improve-campaign-reach-and-measurement-with-azure-confidential/ba-p/4556346",
-      "published": "2026-09-16T18:56:16+00:00",
-      "summary": "Why campaign performance now depends on trusted data collaboration For many years, third-party cookies helped advertisers, publishers, and measurement partners recognize users across parts of the open web. That model continues to evolve as browsers and mobile platforms introduce stronger privacy...",
-      "blog": "Confidential Computing",
-      "blogId": "azureconfidentialcomputingblog",
-      "author": "Deepak_JV"
     }
   ]
 }
