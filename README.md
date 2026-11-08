@@ -81,17 +81,18 @@ In addition to the site data in `data/`, every GitHub Actions run also exports e
 
 ### 1. Required Azure Storage configuration
 
-- Create (or reuse) an **Azure Storage account** (general-purpose v2 is sufficient).
-- The upload script automatically creates the target **Blob container** (default name: `articles`) the first time it runs if it doesn't already exist. You can override the container name with the optional `AZURE_STORAGE_CONTAINER` repository/environment variable.
-- No OIDC, Federated Credential, or Managed Identity setup is required — authentication is done purely via a connection string.
+- The target **Storage account** and `raw-articles` **Blob container** must already exist. The uploader does not create containers.
+- GitHub Actions signs in with **OIDC and Microsoft Entra ID** using `azure/login@v2`; no storage account key or connection string is used.
+- The Entra application/service principal used by the workflow must have a GitHub federated credential for this repository's `master` branch and **Storage Blob Data Contributor** access scoped to the `raw-articles` container. This role allows the workflow to list existing blobs and upload new article blobs.
 
-### 2. Configure `AZURE_STORAGE_CONNECTION_STRING`
+### 2. Configure GitHub Actions
 
-1. In the [Azure Portal](https://portal.azure.com), go to your Storage Account → **Access keys**, and copy a **Connection string**.
-2. In your GitHub repository, go to **Settings → Secrets and variables → Actions → New repository secret**.
-3. Name it `AZURE_STORAGE_CONNECTION_STRING` and paste the connection string as the value.
+In your GitHub repository, go to **Settings → Secrets and variables → Actions** and configure:
 
-The workflow reads this secret and passes it to `scripts/upload_to_blob.py` as an environment variable. If the secret is missing or invalid, the upload step fails and the workflow run is marked **Failed**.
+- **Repository secrets:** `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SUBSCRIPTION_ID` for the Entra identity.
+- **Repository variable:** `AZURE_STORAGE_ACCOUNT_NAME` for the existing Storage account.
+
+The workflow grants `id-token: write` to request a GitHub OIDC token, logs in to Azure, then uses the Azure CLI credential for Blob Storage access. Missing or invalid identity configuration or insufficient container permissions causes the upload step and workflow to fail.
 
 ### 3. Blob path structure
 
@@ -128,16 +129,16 @@ Each JSON file has the shape:
 
 ### 4. Verifying it works
 
-1. Set the `AZURE_STORAGE_CONNECTION_STRING` secret as described above.
-2. Run the workflow manually via **Actions → Fetch Azure Blog Feeds → Run workflow**, or run locally:
+1. Run the workflow manually via **Actions → Fetch Azure Blog Feeds → Run workflow** and check the upload step's logs.
+2. To run locally, install the dependencies, sign in with Azure CLI as an identity that can access the container, and provide the Storage account name:
    ```bash
    pip install -r scripts/requirements.txt
+   az login
+   export AZURE_STORAGE_ACCOUNT_NAME="<storage-account-name>"
    python scripts/fetch_feeds.py
-   AZURE_STORAGE_CONNECTION_STRING="<your-connection-string>" python scripts/upload_to_blob.py
+   AZURE_STORAGE_CONTAINER="raw-articles" python scripts/upload_to_blob.py
    ```
-3. Check the workflow logs for the "Upload new articles to Azure Blob Storage" step — it prints how many articles were uploaded vs. skipped as duplicates.
-4. In the Azure Portal (or with `az storage blob list --container-name articles --connection-string "<...>" --prefix raw/articles/`), confirm blobs exist at `raw/articles/YYYY/MM/DD/{id}.json` for the current date.
-5. Re-run the workflow again and confirm no new blobs are created for articles already uploaded (they should all be reported as skipped/duplicates).
+3. Confirm blobs exist at `raw/articles/YYYY/MM/DD/{id}.json` and re-run to verify previously uploaded articles are skipped as duplicates.
 
 ## 🎬 Teleprompter - Roteiro Diário para Vídeo
 

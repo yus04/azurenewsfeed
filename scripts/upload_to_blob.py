@@ -20,10 +20,10 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 from azure.core.exceptions import ResourceExistsError
+from azure.identity import AzureCliCredential
 from azure.storage.blob import BlobServiceClient, ContentSettings
 
 STAGING_PATH = os.path.join("data", ".blob_staging.json")
-CONTAINER_NAME = os.environ.get("AZURE_STORAGE_CONTAINER", "articles")
 ARTICLES_PREFIX = "raw/articles/"
 
 # Query string parameters that are stripped during URL normalization because
@@ -114,20 +114,18 @@ def load_staged_articles(path=STAGING_PATH):
 
 
 def get_container_client():
-    connection_string = os.environ.get("AZURE_STORAGE_CONNECTION_STRING")
-    if not connection_string:
+    storage_account_name = os.environ.get("AZURE_STORAGE_ACCOUNT_NAME")
+    if not storage_account_name:
         raise RuntimeError(
-            "AZURE_STORAGE_CONNECTION_STRING environment variable is not set."
+            "AZURE_STORAGE_ACCOUNT_NAME environment variable is not set."
         )
 
-    service_client = BlobServiceClient.from_connection_string(connection_string)
-    container_client = service_client.get_container_client(CONTAINER_NAME)
-    try:
-        container_client.create_container()
-        print(f"Created container '{CONTAINER_NAME}'")
-    except ResourceExistsError:
-        pass
-    return container_client
+    service_client = BlobServiceClient(
+        account_url=f"https://{storage_account_name}.blob.core.windows.net",
+        credential=AzureCliCredential(),
+    )
+    container_name = os.environ.get("AZURE_STORAGE_CONTAINER", "articles")
+    return service_client.get_container_client(container_name)
 
 
 def _recent_month_prefixes(days=DEDUP_LOOKBACK_DAYS, now=None):
